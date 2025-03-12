@@ -1,0 +1,42 @@
+pluginManagement {
+    def flutterSdkPath = {
+        def properties = new Properties()
+        file("local.properties").withInputStream { properties.load(it) }
+        def flutterSdkPath = properties.getProperty("flutter.sdk")
+        assert flutterSdkPath != null, "flutter.sdk not set in local.properties"
+        return flutterSdkPath
+    }()
+
+    includeBuild("$flutterSdkPath/packages/flutter_tools/gradle")
+
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        gradlePluginPortal()
+    }
+}
+plugins {
+    id "dev.flutter.flutter-plugin-loader" version "1.0.0"
+    id "com.android.application" version "8.1.0" apply false
+    id "org.jetbrains.kotlin.android" version "2.1.10" apply false
+}
+dependencyResolutionManagement {
+
+    /**
+     * The dependencyResolutionManagement.repositories
+     * block is where you configure the repositories and dependencies used by
+     * all modules in your project, such as libraries that you are using to
+     * create your application. However, you should configure module-specific
+     * dependencies in each module-level build.gradle file. For new projects,
+     * Android Studio includes Google's Maven repository and the Maven Central
+     * Repository by default, but it does not configure any dependencies (unless
+     * you select a template that requires some).
+     */
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+include ":app"
