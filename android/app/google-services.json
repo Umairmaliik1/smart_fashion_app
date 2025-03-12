@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "790503031494",
+    "project_id": "fashionassistapp",
+    "storage_bucket": "fashionassistapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:790503031494:android:4b2144d9331ba506b7cdc7",
+        "android_client_info": {
+          "package_name": "com.example.smart_fashion_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAetHis25xcCRKdBCbhwgttVjRmlvk8qNY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
